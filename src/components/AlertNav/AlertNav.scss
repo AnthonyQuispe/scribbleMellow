@@ -1,0 +1,51 @@
+@use "../../styles/mixin" as *;
+@use "../../styles/variables" as *;
+
+.alert-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: $red;
+
+  @include Desktop {
+    justify-content: space-between;
+  }
+
+  &__social-icons {
+    display: none;
+
+    @include Desktop {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+  }
+
+  &__user-icons {
+    display: none;
+
+    @include Desktop {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+  }
+
+  &__promo-text {
+    color: $white;
+    font-size: 1.25rem;
+
+    &::before {
+      content: "25% off All Items !";
+    }
+
+    @include Desktop {
+      font-size: 1.6875rem;
+      &::before {
+        content: "25% off All Items For A Limited Time !";
+      }
+    }
+  }
+}

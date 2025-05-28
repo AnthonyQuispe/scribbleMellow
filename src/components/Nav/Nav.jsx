@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./Nav.scss";
-import Logo from "../../assets/logo/ScribbleMeMellowLogo.svg";
+import Logo from "../../assets/Logo/ScribbleMeMellowLogo.svg";
 import MenuIcon from "../../assets/Icons/MenuIcon.svg";
 import ProfileIcon from "../../assets/Icons/ProfileIcon.svg";
 import CartIcon from "../../assets/Icons/CartIcon.svg";
