@@ -1,0 +1,80 @@
+@use "../../styles/mixin" as *;
+@use "../../styles/variables" as *;
+@use "../../styles/typography" as *;
+
+.footer {
+  width: 100%;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  background-image: url("../../assets/Backgrounds/FooterBackground.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include Tablet {
+    flex-direction: row;
+  }
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+
+    &-link {
+      font-family: "Porkys";
+      font-size: 2.25rem;
+      font-weight: 400;
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      color: $white;
+      -webkit-text-stroke: 2.5px black;
+      text-shadow: 0 0 1x black;
+
+      @include Tablet {
+        justify-content: start;
+      }
+    }
+  }
+
+  &__branding {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+
+    @include Tablet {
+      align-items: end;
+    }
+  }
+  &__logo {
+    max-width: 190px;
+
+    &-link {
+      width: 75dvw;
+      max-width: 400px;
+      background-color: $white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 40px;
+      border: 10px solid $black;
+      border-radius: 20px;
+
+      @include Tablet {
+      }
+    }
+  }
+
+  &__disclaimer {
+    font-size: 0.875rem;
+    color: rgba($white, 0.6);
+    text-align: right;
+    max-width: 500px;
+  }
+}
