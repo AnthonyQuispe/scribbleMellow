@@ -85,7 +85,7 @@ export default function Nav({ MenuModal }) {
             to="/"
             className="nav__list-items-link nav__list-items-link--logo"
           >
-            <img src={Logo} />
+            <img src={Logo} className="nav__list-items-link-logo-img" />
           </Link>
         </li>
         <li className="nav__list-items">

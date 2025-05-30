@@ -1,0 +1,74 @@
+@use "../../styles/mixin" as *;
+@use "../../styles/variables" as *;
+
+.hero {
+  min-height: calc(100dvh - 184px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../assets/Backgrounds/HeroBackground.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include Desktop {
+    min-height: 600px;
+    height: calc(100dvh - 155px);
+    max-height: 900px;
+  }
+
+  &__container {
+    background-image: url("../../assets/Backgrounds/HeroBackgroundContainerMobile.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: clamp(320px, 90dvw, 700px);
+    height: clamp(300px, 70dvh, 600px);
+    padding: 30px;
+    gap: 100px;
+
+    @include Desktop {
+      background-image: url("../../assets/Backgrounds/HeroContainerBackground.svg");
+      min-height: 500px;
+      width: clamp(320px, 90dvw, 1450px);
+    }
+  }
+
+  &__img {
+    display: none;
+
+    @include Desktop {
+      display: block;
+      width: clamp(320px, 25dvw, 420px);
+      height: auto;
+      max-height: 560px;
+    }
+  }
+  &__title {
+  }
+
+  &__text {
+    &-container {
+      height: 100%;
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__description {
+    display: none;
+    font-size: 1rem;
+
+    @include Phone {
+      display: block;
+    }
+  }
+}
