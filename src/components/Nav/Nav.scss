@@ -75,6 +75,13 @@
           max-width: 210px;
           padding: 10px;
         }
+
+        &:hover {
+          @include Desktop {
+            background-color: $yellow;
+            color: $black;
+          }
+        }
         &--active {
           @include Desktop {
             background-color: $yellow;
@@ -97,6 +104,7 @@
 }
 
 .menu-modal {
+  z-index: 2;
   width: 100%;
   min-height: 100dvh;
   height: 100%;
@@ -116,7 +124,7 @@
     background-color: $white;
 
     &-close-img {
-      width: 40px;
+      width: 30px;
     }
 
     &-logo {

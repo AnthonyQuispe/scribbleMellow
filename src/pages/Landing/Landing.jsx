@@ -2,8 +2,10 @@ import "./Landing.scss";
 import Nav from "../../components/Nav/Nav";
 import AlertNav from "../../components/AlertNav/AlertNav";
 import Footer from "../../components/Footer/Footer";
-
 import HeroImg from "../../assets/Images/HeroImg.png";
+import SnorlaxSticker from "../../assets/Images/SnorlaxSticker.png";
+import PhoneWallpaper from "../../assets/Images/PhoneWallpaper.png";
+import { Link } from "react-router-dom";
 export default function Landing() {
   return (
     <main className="landing">
@@ -27,6 +29,38 @@ export default function Landing() {
             </p>
           </div>
         </div>
+      </section>
+      <section className="products">
+        <ul className="products__list">
+          <li className="products__item">
+            <img
+              src={SnorlaxSticker}
+              className="products__image"
+              alt="Snorlax Sticker"
+            />
+            <Link to="/products/stickers" className="products__link">
+              Stickers
+            </Link>
+          </li>
+          <li className="products__item">
+            <img
+              src={PhoneWallpaper}
+              className="products__image"
+              alt="Phone wallpaper"
+            />
+            <Link to="/products/wallpapers" className="products__link">
+              Wallpapers
+            </Link>
+          </li>
+          <li className="products__item">
+            <img
+              src={PhoneWallpaper}
+              className="products__image"
+              alt="Art Prints"
+            />
+            <Link className="products__link">Art Prints</Link>
+          </li>
+        </ul>
       </section>
       <Footer />
     </main>

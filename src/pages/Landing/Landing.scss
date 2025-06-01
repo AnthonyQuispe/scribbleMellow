@@ -2,6 +2,10 @@
 @use "../../styles/variables" as *;
 
 .hero {
+  position: relative;
+  padding: 40px 0;
+  z-index: 1;
+  margin-bottom: -60px;
   min-height: calc(100dvh - 184px);
   display: flex;
   justify-content: center;
@@ -70,5 +74,66 @@
     @include Phone {
       display: block;
     }
+  }
+}
+
+.products {
+  min-height: calc(100dvh - 184px);
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../assets/Backgrounds/ProductSectionBackground.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include Desktop {
+    padding: 200px 40px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 400px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    @include Desktop {
+      gap: 20px;
+    }
+  }
+
+  &__image {
+    width: 80%;
+    height: auto;
+  }
+
+  &__link {
+    font-size: clamp(1.125rem, 5dvw, 2rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $red-light;
+    color: $white;
+    max-width: 400px;
+    width: 75%;
+    height: 50px;
+    border-radius: 10px;
+  }
+
+  &__link:hover {
+    background-color: $blue;
   }
 }
