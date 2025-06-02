@@ -5,7 +5,9 @@ import Footer from "../../components/Footer/Footer";
 import HeroImg from "../../assets/Images/HeroImg.png";
 import SnorlaxSticker from "../../assets/Images/SnorlaxSticker.png";
 import PhoneWallpaper from "../../assets/Images/PhoneWallpaper.png";
+import DiscountSticker from "../../assets/Images/DiscountSticker.png";
 import { Link } from "react-router-dom";
+
 export default function Landing() {
   return (
     <main className="landing">
@@ -61,6 +63,23 @@ export default function Landing() {
             <Link className="products__link">Art Prints</Link>
           </li>
         </ul>
+      </section>
+      <section className="discount">
+        <div className="discount__content">
+          <h2 className="discount__title">
+            25% off All Items For A Limited Time !
+          </h2>
+          <p className="discount__description">
+            Use the Code “springSale” at checkout
+          </p>
+        </div>
+        <div className="discount__image-wrapper">
+          <img
+            className="discount__image"
+            src={DiscountSticker}
+            alt="Discount Stickers"
+          />
+        </div>
       </section>
       <Footer />
     </main>
