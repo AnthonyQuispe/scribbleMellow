@@ -92,6 +92,13 @@
           background-color: white;
           border: unset;
           padding: unset;
+
+          &:hover {
+            @include Desktop {
+              background-color: unset;
+              color: unset;
+            }
+          }
         }
       }
     }
@@ -104,7 +111,7 @@
 }
 
 .menu-modal {
-  z-index: 2;
+  z-index: 9;
   width: 100%;
   min-height: 100dvh;
   height: 100%;

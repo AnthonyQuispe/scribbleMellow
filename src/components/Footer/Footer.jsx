@@ -18,12 +18,12 @@ export default function Footer() {
           </Link>
         </li>
         <li className="footer__nav-item">
-          <Link className="footer__nav-link" to="/profile">
-            Profile
+          <Link className="footer__nav-link" to="/about">
+            About Us
           </Link>
         </li>
         <li className="footer__nav-item">
-          <Link className="footer__nav-link" to="/contact-us">
+          <Link className="footer__nav-link" to="/contact">
             Contact Us
           </Link>
         </li>

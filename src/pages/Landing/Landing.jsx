@@ -5,8 +5,16 @@ import Footer from "../../components/Footer/Footer";
 import HeroImg from "../../assets/Images/HeroImg.png";
 import SnorlaxSticker from "../../assets/Images/SnorlaxSticker.png";
 import PhoneWallpaper from "../../assets/Images/PhoneWallpaper.png";
+import ArtPrints from "../../assets/Images/ArtPrintSticker.png";
 import DiscountSticker from "../../assets/Images/DiscountSticker.png";
+import MadetoMakeYouSmile from "../../assets/Images/MadetoMakeYouSmile.png";
+import MadebyMellow from "../../assets/Images/MadebyMellow.png";
+import BecomingMellow from "../../assets/Images/BecomingMellow.png";
+
 import { Link } from "react-router-dom";
+import YoutubeIcon from "../../assets/Icons/YoutubeIcon.png";
+import InstagramIcon from "../../assets/Icons/InstagramIcon.png";
+import TwitterIcon from "../../assets/Icons/TwitterIcon.png";
 
 export default function Landing() {
   return (
@@ -55,11 +63,7 @@ export default function Landing() {
             </Link>
           </li>
           <li className="products__item">
-            <img
-              src={PhoneWallpaper}
-              className="products__image"
-              alt="Art Prints"
-            />
+            <img src={ArtPrints} className="products__image" alt="Art Prints" />
             <Link className="products__link">Art Prints</Link>
           </li>
         </ul>
