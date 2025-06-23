@@ -2,19 +2,14 @@ import "./Landing.scss";
 import Nav from "../../components/Nav/Nav";
 import AlertNav from "../../components/AlertNav/AlertNav";
 import Footer from "../../components/Footer/Footer";
+import Featured from "../../components/Featured/Featured";
 import HeroImg from "../../assets/Images/HeroImg.png";
 import SnorlaxSticker from "../../assets/Images/SnorlaxSticker.png";
 import PhoneWallpaper from "../../assets/Images/PhoneWallpaper.png";
 import ArtPrints from "../../assets/Images/ArtPrintSticker.png";
 import DiscountSticker from "../../assets/Images/DiscountSticker.png";
-import MadetoMakeYouSmile from "../../assets/Images/MadetoMakeYouSmile.png";
-import MadebyMellow from "../../assets/Images/MadebyMellow.png";
-import BecomingMellow from "../../assets/Images/BecomingMellow.png";
 
 import { Link } from "react-router-dom";
-import YoutubeIcon from "../../assets/Icons/YoutubeIcon.png";
-import InstagramIcon from "../../assets/Icons/InstagramIcon.png";
-import TwitterIcon from "../../assets/Icons/TwitterIcon.png";
 
 export default function Landing() {
   return (
@@ -85,6 +80,7 @@ export default function Landing() {
           />
         </div>
       </section>
+      <Featured />
       <Footer />
     </main>
   );

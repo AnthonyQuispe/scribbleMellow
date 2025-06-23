@@ -111,7 +111,7 @@ export default function Nav({ MenuModal }) {
           </button>
         </li>
         <li className="nav__list-items">
-          <Link to="/home" className="nav__list-items-link ">
+          <Link to="/" className="nav__list-items-link ">
             <img
               src={Logo}
               alt="Scribble Me Mellow Logo "
