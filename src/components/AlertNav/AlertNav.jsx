@@ -1,11 +1,11 @@
 import React from "react";
 import "./AlertNav.scss";
 
-import YoutubeIcon from "../../assets/Icons/YoutubeIcon.png";
-import InstagramIcon from "../../assets/Icons/InstagramIcon.png";
-import TwitterIcon from "../../assets/Icons/TwitterIcon.png";
-import ProfileIcon from "../../assets/Icons/ProfileIconWhite.png";
-import CartIcon from "../../assets/Icons/CartIconWhite.png";
+import YoutubeIcon from "../../assets/Icons/YoutubeIcon.svg";
+import InstagramIcon from "../../assets/Icons/InstagramIcon.svg";
+import TwitterIcon from "../../assets/Icons/TwitterIcon.svg";
+import ProfileIcon from "../../assets/Icons/ProfileIconWhite.svg";
+import CartIcon from "../../assets/Icons/CartIconWhite.svg";
 import { Link } from "react-router-dom";
 
 export default function AlertNav() {

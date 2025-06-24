@@ -5,7 +5,7 @@ import Logo from "../../assets/Logo/ScribbleMeMellowLogo.svg";
 import MenuIcon from "../../assets/Icons/MenuIcon.svg";
 import ProfileIcon from "../../assets/Icons/ProfileIcon.svg";
 import CartIcon from "../../assets/Icons/CartIcon.svg";
-import CloseIcon from "../../assets/Icons/CloseIcon.png";
+import CloseIcon from "../../assets/Icons/CloseIcon.svg";
 
 export default function Nav({ MenuModal }) {
   const [modal, setModal] = useState(false);
@@ -122,12 +122,20 @@ export default function Nav({ MenuModal }) {
         <div className="nav__list-container">
           <li className="nav__list-items">
             <Link to="/profile" className="nav__list-items-link">
-              <img src={ProfileIcon} alt="Profile Button" />
+              <img
+                src={ProfileIcon}
+                alt="Profile Button"
+                className="nav__list-items-img"
+              />
             </Link>
           </li>
           <li className="nav__list-items">
             <Link to="/Cart" className="nav__list-items-link">
-              <img src={CartIcon} alt="Cart Button" />
+              <img
+                src={CartIcon}
+                alt="Cart Button"
+                className="nav__list-items-img"
+              />
             </Link>
           </li>
         </div>

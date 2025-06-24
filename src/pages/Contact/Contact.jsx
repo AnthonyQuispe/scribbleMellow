@@ -3,9 +3,9 @@ import Nav from "../../components/Nav/Nav";
 import AlertNav from "../../components/AlertNav/AlertNav";
 import Footer from "../../components/Footer/Footer";
 
-import YoutubeIcon from "../../assets/Icons/YoutubeIcon.png";
-import InstagramIcon from "../../assets/Icons/InstagramIcon.png";
-import TwitterIcon from "../../assets/Icons/TwitterIcon.png";
+import YoutubeIcon from "../../assets/Icons/YoutubeIcon.svg";
+import InstagramIcon from "../../assets/Icons/InstagramIcon.svg";
+import TwitterIcon from "../../assets/Icons/TwitterIcon.svg";
 
 export default function Landing() {
   function handleSubmit(e) {

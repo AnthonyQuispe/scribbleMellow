@@ -37,6 +37,7 @@
     height: clamp(300px, 70dvh, 600px);
     padding: 30px;
     gap: 100px;
+    overflow: hidden;
 
     @include Desktop {
       background-image: url("../../assets/Backgrounds/HeroContainerBackground.svg");

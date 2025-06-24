@@ -44,7 +44,9 @@
     color: $white;
     font-size: clamp(1rem, 4dvw, 1.5rem);
   }
-
+  &__social-icon {
+    width: 50px;
+  }
   &__social-text {
     display: none;
 
