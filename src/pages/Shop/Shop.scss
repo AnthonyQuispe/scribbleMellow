@@ -1,0 +1,236 @@
+@use "../../styles/mixin" as *;
+@use "../../styles/variables" as *;
+
+.shop-content {
+  width: 100%;
+  background-color: $white;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+
+  @include Desktop {
+    padding: 100px 20px;
+  }
+
+  &__header {
+    width: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    @include Tablet {
+      display: flex;
+    }
+  }
+
+  &__filter-btns {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  &__filter-btn {
+    height: 50px;
+    font-size: 1rem;
+    color: $white;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    width: 10dvw;
+    max-width: 210px;
+    background-color: $blue;
+    border: 5px solid $black;
+    border-radius: 30px;
+  }
+
+  &__filter-btn--active {
+    background-color: $yellow;
+    color: $black;
+  }
+
+  &__sort-select {
+    appearance: none; // 🔑 removes native styling
+    -webkit-appearance: none; // for Safari
+    -moz-appearance: none; // for Firefox
+    height: 50px;
+    font-size: 1rem;
+    color: $black;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: $yellow;
+    border: 5px solid $black;
+    border-radius: 30px;
+    outline: none;
+    padding: 10px;
+  }
+
+  &__title {
+    font-size: 2rem;
+    color: $white;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    width: clamp(320px, 90dvw, 1450px);
+  }
+
+  &__item {
+    width: clamp(250px, 20dvw, 450px);
+    height: clamp(350px, 30dvw, 550px);
+    border: 8px solid $black;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 20%;
+
+    &-container {
+      height: 60%;
+      width: 100%;
+    }
+  }
+
+  &__text-container {
+    width: 100%;
+    height: 40%;
+    padding: 10px;
+    background-color: $white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-top: 8px solid $black;
+  }
+
+  &__name {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  &__cart {
+    background-color: transparent;
+    border: none;
+    width: 50;
+  }
+
+  &__price {
+    font-size: 1.5rem;
+    &-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  &__decor-sun {
+    width: 100px;
+  }
+
+  &__decor-line {
+    width: 70px;
+    border-bottom: 2px solid $white;
+  }
+
+  &__newsletter {
+    max-width: 400px;
+    width: 100%;
+    background-color: $white;
+    padding: 50px 20px;
+    border: solid 8px $black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    @include Tablet {
+      max-width: 600px;
+    }
+
+    @include Desktop {
+      max-width: 800px;
+    }
+
+    &-text {
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    &-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      @include Tablet {
+        flex-direction: row;
+        width: auto;
+        border: solid 4px $black;
+        border-radius: 20px;
+        align-items: center;
+        overflow: hidden;
+      }
+    }
+
+    &-input {
+      max-width: 500px;
+      height: 100%;
+      font-size: 1rem;
+      background-color: $white;
+      border: solid 4px $black;
+      border-radius: 20px;
+      overflow: hidden;
+      padding: 8px;
+      display: flex;
+
+      &:focus {
+        outline: none;
+      }
+
+      @include Tablet {
+        border: none;
+        border-radius: none;
+      }
+    }
+
+    &-button {
+      max-width: 250px;
+      background-color: $red;
+      color: $white;
+      padding: 8px 16px;
+      border: solid 4px $black;
+      border-radius: 20px;
+      font-size: 1rem;
+
+      &:hover {
+        background-color: $yellow;
+        color: $black;
+      }
+
+      @include Tablet {
+        border: solid 4px $black;
+        border-radius: 16px;
+        border-top: none;
+        border-bottom: none;
+        border-right: none;
+      }
+    }
+  }
+}

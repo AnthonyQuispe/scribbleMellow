@@ -4,6 +4,15 @@
 .landing {
   width: 100%;
   min-width: 320px;
+
+  &-nav {
+    background-color: $white;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
 }
 .hero {
   position: relative;

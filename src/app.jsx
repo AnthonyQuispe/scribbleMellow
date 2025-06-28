@@ -3,6 +3,7 @@ import "./styles/_global.scss";
 import Landing from "./pages/Landing/Landing";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
+import Shop from "./pages/Shop/Shop";
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
       <Route path="/" element={<Landing />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/shop" element={<Shop />} />
     </Routes>
   );
 }

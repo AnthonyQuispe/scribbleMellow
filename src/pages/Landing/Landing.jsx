@@ -14,8 +14,10 @@ import { Link } from "react-router-dom";
 export default function Landing() {
   return (
     <main className="landing">
-      <AlertNav />
-      <Nav />
+      <div className="landing-nav">
+        <AlertNav />
+        <Nav />
+      </div>
       <section className="hero">
         <div className="hero__container">
           <img
