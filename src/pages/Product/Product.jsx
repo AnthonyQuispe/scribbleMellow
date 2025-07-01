@@ -10,6 +10,7 @@ import { useState } from "react";
 
 export default function Product() {
   const { id } = useParams();
+  const [selectedSize, setSelectedSize] = useState(null);
 
   const productData = [
     {
@@ -56,27 +57,47 @@ export default function Product() {
               alt={`Side preview of ${product.name}`}
             />
           </div>
-          <img
-            className="product-content__preview-main"
-            src={product.picture}
-            alt={`Main preview of ${product.name}`}
-          />
+          <div className="product-content__preview-main-container">
+            <img
+              className="product-content__preview-main"
+              src={product.picture}
+              alt={`Main preview of ${product.name}`}
+            />
+          </div>
         </div>
-        <form className="product-content__form">
+        <form
+          className="product-content__form"
+          onSubmit={(e) => e.preventDefault()}
+        >
           <h1 className="product-content__title">{product.name}</h1>
           <p className="product-content__price">${product.price}</p>
-          <p className="product-content__description">{product.description}</p>
-          <div>
-            <p className="product-content__size-label">Size:</p>
-            {product.sizes.map((size) => (
-              <button key={size} className="product-content__size-option">
-                {size}
-              </button>
-            ))}
+          <div className="product-content__size">
+            <label className="product-content__size-label">Size:</label>
+            <div className="product-content__size-buttons">
+              {product.sizes.map((size) => (
+                <button
+                  key={size}
+                  className={`product-content__size-option${
+                    selectedSize === size
+                      ? " product-content__size-option--active"
+                      : ""
+                  }`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setSelectedSize(size);
+                  }}
+                >
+                  {size}
+                </button>
+              ))}
+            </div>
           </div>
-          <div>
+          <div className="product-content__qty">
             <p className="product-content__qty-label">Qty</p>
             <select className="product-content__qty-select">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
               {[
                 ...Array(10).map((_, i) => (
                   <option key={i + 1}>{i + 1}</option>
