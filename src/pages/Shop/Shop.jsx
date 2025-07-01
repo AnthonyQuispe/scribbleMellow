@@ -106,7 +106,7 @@ export default function Shop() {
               name="Sort by "
             >
               <option value="" disabled>
-                Sort By
+                Sort By - - - - - - -
               </option>
               <option value="price-low-high">Price: Low to High</option>
               <option value="price-high-low">Price: High to Low</option>
