@@ -2,6 +2,7 @@
 @use "../../styles/variables" as *;
 
 .shop-content {
+  min-height: calc(100dvh - 184px);
   width: 100%;
   background-color: $white;
   padding: 50px 20px;
