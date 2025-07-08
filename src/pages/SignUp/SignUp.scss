@@ -3,6 +3,7 @@
 
 .signup {
   &-content {
+    padding: 20px 0;
     min-height: calc(100dvh - 184px);
     background-color: $yellow;
     display: flex;

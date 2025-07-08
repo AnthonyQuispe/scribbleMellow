@@ -13,13 +13,13 @@ export default function SignUp() {
   const [formError, setFormError] = useState(false);
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
-  const [passowrd, setPassword] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      await FirebaseSignup(username, email, passowrd, navigate);
+      await FirebaseSignup(username, email, password, navigate);
     } catch (error) {
       setFormError(true);
     }
@@ -57,7 +57,7 @@ export default function SignUp() {
               placeholder="Password"
               type="password"
               autoComplete="new-password"
-              value={passowrd}
+              value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>

@@ -1,5 +1,5 @@
 import "./GoogleButton.scss";
-import GoogleIcon from "../../assets/Icons/GoogleIcon.png";
+import GoogleIcon from "../../assets/Icons/GoogleIcon.svg";
 
 import { doc, setDoc } from "firebase/firestore";
 import { auth, db } from "../../firebase/FirebaseConfig";
