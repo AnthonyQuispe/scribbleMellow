@@ -112,6 +112,7 @@
 
     &__title {
       font-size: 1.75rem;
+      color: $black;
 
       @include Desktop {
         font-size: 2.25rem;
@@ -120,6 +121,7 @@
 
     &__price {
       font-size: 1.5rem;
+      color: $black;
     }
 
     &__size {
@@ -132,6 +134,7 @@
         gap: 10px;
       }
       &-option {
+        color: $black;
         font-size: 1rem;
         height: 50px;
         width: 50px;
@@ -145,6 +148,7 @@
       }
       &-label {
         font-size: 1.25rem;
+        color: $black;
       }
     }
 
@@ -162,10 +166,12 @@
         outline: none;
         font-size: 1rem;
         padding: 10px;
+        color: $black;
       }
     }
 
     &__add-btn {
+      color: $black;
       font-size: 1.25rem;
       width: fit-content;
       border-radius: 10px;
@@ -179,6 +185,7 @@
     }
 
     &__wishlist-btn {
+      color: $black;
       font-size: 1rem;
       width: fit-content;
       background-color: transparent;
