@@ -1,0 +1,94 @@
+@use "../../styles/mixin" as *;
+@use "../../styles/variables" as *;
+
+.profile {
+  width: 100%;
+  min-width: 320px;
+  &__content {
+    padding: 20px;
+    width: 100%;
+    min-height: calc(100dvh - 184px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__btns {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  &__form {
+    width: 100%;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &-input {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    &-btns {
+      display: flex;
+      gap: 20px;
+    }
+  }
+
+  &__input {
+    max-width: 400px;
+    width: 100%;
+    font-size: 1rem;
+    background-color: $white;
+    border: solid 4px $black;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 8px;
+    height: 50px;
+    display: flex;
+    outline: none;
+  }
+
+  &__btn {
+    min-height: 50px;
+    padding: 10px 20px;
+    background-color: $blue;
+    color: $white;
+    border: solid 4px $black;
+    border-radius: 20px;
+    font-size: 1rem;
+
+    &:hover {
+      background-color: $dark-blue;
+    }
+
+    &--active {
+      background-color: $yellow;
+      color: black;
+
+      &:hover {
+        background-color: $yellow;
+      }
+    }
+
+    &--red {
+      background-color: $red;
+
+      &:hover {
+        background-color: $yellow;
+        color: $black;
+      }
+    }
+    &--green {
+      background-color: $green;
+
+      &:hover {
+        background-color: $yellow;
+        color: $black;
+      }
+    }
+  }
+}

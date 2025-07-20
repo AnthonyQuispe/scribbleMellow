@@ -31,7 +31,7 @@ export default function SignUp() {
       <Nav />
       <section className="signup-content">
         <form className="signup-content__form" onSubmit={handleFormSubmit}>
-          <h2 className="signup-content__title">Sign up</h2>
+          <h1 className="signup-content__title">Sign up</h1>
           {formError && (
             <p> Please Enter a Valid Email and Password And Try Again</p>
           )}

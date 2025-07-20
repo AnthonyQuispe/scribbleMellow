@@ -29,7 +29,7 @@ export default function Login() {
       <Nav />
       <section className="login-content">
         <form className="login-content__form" onSubmit={handleFormSubmit}>
-          <h2 className="login-content__title">Sign in </h2>
+          <h1 className="login-content__title">Sign in </h1>
           {formError && (
             <p>Please Enter a Valid Email and Password And Try Again</p>
           )}
