@@ -4,7 +4,7 @@ export const FirebaseLogin = async (email, password, navigate) => {
   const auth = getAuth();
   try {
     await signInWithEmailAndPassword(auth, email, password);
-    navigate("/dashboard");
+    navigate("/");
   } catch (error) {
     alert("Invaild email or password");
   }

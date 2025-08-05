@@ -57,7 +57,11 @@ export default function AlertNav() {
       </div>
       <ul className="alert-nav__user-icons">
         <li className="alert-nav__user-item">
-          <Link className="alert-nav__user-link" aria-label="User Profile">
+          <Link
+            className="alert-nav__user-link"
+            aria-label="User Profile"
+            to={"/profile"}
+          >
             <img
               className="alert-nav__user-icon"
               src={ProfileIcon}

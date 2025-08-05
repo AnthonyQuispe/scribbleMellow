@@ -35,16 +35,16 @@ export default function Profile() {
         <h1> {`${username} Account`}</h1>
         <div className="profile__btns">
           <button
-            className={`profile__btn ${orders ? "profile__btn--active" : ""}`}
-            onClick={() => handleTabChange("orders")}
-          >
-            My Orders
-          </button>
-          <button
             className={`profile__btn ${profile ? "profile__btn--active" : ""}`}
             onClick={() => handleTabChange("profile")}
           >
             Profile
+          </button>
+          <button
+            className={`profile__btn ${orders ? "profile__btn--active" : ""}`}
+            onClick={() => handleTabChange("orders")}
+          >
+            My Orders
           </button>
           <button
             className={`profile__btn ${
@@ -57,21 +57,36 @@ export default function Profile() {
         </div>
         <div>
           {orders && (
-            <div>
-              <ul>
-                <li>Orders #</li>
-                <li>Order Date</li>
-                <li>Total Price</li>
-                <li>Invoice</li>
-              </ul>
-              <ul>
-                <li>
+            <div className="profile__order">
+              <ul className="profile__order-list">
+                <li className="profile__order-list-item">
+                  <p className="profile__order-label">Orders #</p>
                   <p className="order__number">12345</p>
-                  <p className="order__date">09/07/2001</p>
-                  <p className="order__price">$250.0</p>
-                  <button className="order__button">View</button>
+                </li>
+                <li className="profile__order-list-item">
+                  <p className="profile__order-label">Order Date </p>
+                  <p className="profile__order-date">09/07/2001</p>
+                </li>
+                <li className="profile__order-list-item">
+                  <p className="profile__order-label">Store</p>
+                  <p className="profile__order-store">ScribbleMeMellow.com</p>
+                </li>
+                <li className="profile__order-list-item profile__order-list-item--total">
+                  <p className="profile__order-label ">Total Price</p>
+                  <p className="profile__order-price">$250.0</p>
                 </li>
               </ul>
+              <div className="profile__order-button-container">
+                <button className="profile__order-button">
+                  Track My Order
+                </button>
+                <button className="profile__order-button">
+                  View Order Detail
+                </button>
+                <button className="profile__order-button">
+                  Write A Review
+                </button>
+              </div>
             </div>
           )}
           {profile && (
@@ -120,6 +135,13 @@ export default function Profile() {
                 >
                   {!isEditing ? "Edit" : "Submit"}
                 </button>
+                <button
+                  className="profile__btn profile__btn--red"
+                  type="button"
+                  onClick={() => setIsEditing(false)}
+                >
+                  Cancel
+                </button>
                 <button className="profile__btn profile__btn--red">
                   Delete Account?
                 </button>
@@ -160,9 +182,19 @@ export default function Profile() {
                 >
                   {!isEditing ? "Edit" : "Submit"}
                 </button>
+                <button
+                  className="profile__btn profile__btn--red"
+                  type="button"
+                  onClick={() => setIsEditing(false)}
+                >
+                  Cancel
+                </button>
               </div>
             </form>
           )}
+        </div>
+        <div className="profile__sign-out-container">
+          <button className="profile__sign-out">Sign Out</button>
         </div>
       </section>
       <Footer />

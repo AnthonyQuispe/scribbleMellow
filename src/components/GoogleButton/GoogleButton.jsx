@@ -21,16 +21,24 @@ export default function GoogleButton() {
           username: user.email.split("@")[0],
         };
 
-        await setDoc(userRef, userData, { merge: true });
+        try {
+          await setDoc(userRef, userData, { merge: true });
+        } catch (firestoreError) {
+          console.error("Error writing user to Firestore:", firestoreError);
+          // Optional: you can alert the user here
+          alert("Trouble loggign in with Google");
+        }
 
-        navigate("/dashboard", {
+        // ✅ Redirect regardless of Firestore success
+        navigate("/", {
           state: {
-            userEmail: auth.currentUser.email,
+            userEmail: user.email,
           },
         });
       })
       .catch((error) => {
-        console.log(error);
+        console.error("Google sign-in failed:", error);
+        alert("Google sign-in failed. Please try again.");
       });
   };
 
