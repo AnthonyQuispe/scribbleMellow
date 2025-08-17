@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import "./styles/_global.scss";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Landing from "./pages/Landing/Landing";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
@@ -8,7 +9,7 @@ import Product from "./pages/Product/Product";
 import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
 import Profile from "./pages/Profile/Profile";
-
+import Forgot from "./pages/Forgot/Forgot";
 export default function App() {
   return (
     <Routes>
@@ -19,7 +20,15 @@ export default function App() {
       <Route path="/shop/:id" element={<Product />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<SignUp />} />
-      <Route path="/profile" element={<Profile />} />
+      <Route
+        path="/profile"
+        element={
+          <PrivateRoute>
+            <Profile />
+          </PrivateRoute>
+        }
+      />
+      <Route path="/forgot" element={<Forgot />} />
     </Routes>
   );
 }
