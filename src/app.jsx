@@ -10,6 +10,8 @@ import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
 import Profile from "./pages/Profile/Profile";
 import Forgot from "./pages/Forgot/Forgot";
+import Error from "./pages/404/404";
+
 export default function App() {
   return (
     <Routes>
@@ -29,6 +31,7 @@ export default function App() {
         }
       />
       <Route path="/forgot" element={<Forgot />} />
+      <Route path="*" element={<Error />} />
     </Routes>
   );
 }
