@@ -35,17 +35,18 @@ export default function Profile() {
         <h1> {`${username} Account`}</h1>
         <div className="profile__btns">
           <button
-            className={`profile__btn ${profile ? "profile__btn--active" : ""}`}
-            onClick={() => handleTabChange("profile")}
-          >
-            Profile
-          </button>
-          <button
             className={`profile__btn ${orders ? "profile__btn--active" : ""}`}
             onClick={() => handleTabChange("orders")}
           >
             My Orders
           </button>
+          <button
+            className={`profile__btn ${profile ? "profile__btn--active" : ""}`}
+            onClick={() => handleTabChange("profile")}
+          >
+            Profile
+          </button>
+
           <button
             className={`profile__btn ${
               changePassword ? "profile__btn--active" : ""
